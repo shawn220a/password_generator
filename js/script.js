@@ -55,7 +55,7 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword(passwordText) {
-  var password = passwordText
+  var password = passwordText;
   var passwordTextFinal = document.querySelector("#password");
 
   passwordTextFinal.value = password;
@@ -68,8 +68,3 @@ function writePassword(passwordText) {
 function copyToClipboard() {
   // BONUS 
 }
-
-// Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-
-// BONUS EVENT LISTENER
