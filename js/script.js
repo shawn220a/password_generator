@@ -8,16 +8,59 @@ const specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
 
 // Generate Password
 function generatePassword() {
-  console.log(lowerCaseChar);
+  let password = [];
+  let passwordChars = [];
+
+  let passLength = prompt('How long do you want the password?');
+  let lower = confirm('Would you like lower case characters?');
+  let upper = confirm('Would you like upper case characters?');
+  let number = confirm('Would you like numbers?');
+  let special = confirm('Would you like special case characters?');
+
+  if (lower === true) {
+    for (x of lowerCaseChar) {
+      password.push(x);
+    }
+  }
+  if (upper === true) {
+    for (x of upperCaseChar) {
+      password.push(x);
+    }
+  }
+  if (number === true) {
+    for (x of numberChar) {
+      password.push(x);
+    }
+  }
+  if (special === true) {
+    for (x of specialChar) {
+      password.push(x);
+    }
+  }
+
+  for (i = 0; i < passLength; i++) {
+    let passwordChoice = Math.floor(Math.random() * password.length);
+    let passChar = password[passwordChoice];
+    passwordChars.push(passChar);
+  }
+  
+  writePassword(passwordChars);
 }
 
 
 // Write password to the #password input
-function writePassword() {
-  // var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+function writePassword(passwordChars) {
+  // var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  // var passwordFinal = passwordText[0].innerText;
+
+  console.log(passwordChars);
+
+  // for (x of passwordChars) {
+  //   passwordFinal = x;
+  //   passwordText[0].innerText = passwordFinal;
+  // }
+
 
   // copyBtn.removeAttribute("disabled");
   // copyBtn.focus();
@@ -28,6 +71,6 @@ function copyToClipboard() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// generateBtn.addEventListener("click", writePassword);
 
 // BONUS EVENT LISTENER
