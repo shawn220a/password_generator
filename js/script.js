@@ -6,16 +6,21 @@ const upperCaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L
 const numberChar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 const specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
 
+// Generate Password
+function generatePassword() {
+  console.log(lowerCaseChar);
+}
+
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  // var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
-  copyBtn.removeAttribute("disabled");
-  copyBtn.focus();
+  // copyBtn.removeAttribute("disabled");
+  // copyBtn.focus();
 }
 
 function copyToClipboard() {
