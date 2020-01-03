@@ -10,6 +10,7 @@ const specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
 function generatePassword() {
   let password = [];
   let passwordChars = [];
+  let passwordText = '';
 
   let passLength = prompt('How long do you want the password?');
   let lower = confirm('Would you like lower case characters?');
@@ -43,23 +44,21 @@ function generatePassword() {
     let passChar = password[passwordChoice];
     passwordChars.push(passChar);
   }
+
+  for (x of passwordChars) {
+    passwordText += x;
+  }
   
-  writePassword(passwordChars);
+  writePassword(passwordText);
 }
 
 
 // Write password to the #password input
-function writePassword(passwordChars) {
-  // var passwordText = document.querySelector("#password");
+function writePassword(passwordText) {
+  var password = passwordText
+  var passwordTextFinal = document.querySelector("#password");
 
-  // var passwordFinal = passwordText[0].innerText;
-
-  console.log(passwordChars);
-
-  // for (x of passwordChars) {
-  //   passwordFinal = x;
-  //   passwordText[0].innerText = passwordFinal;
-  // }
+  passwordTextFinal.value = password;
 
 
   // copyBtn.removeAttribute("disabled");
