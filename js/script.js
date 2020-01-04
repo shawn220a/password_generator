@@ -69,6 +69,9 @@ function writePassword(passwordText) {
   // copyBtn.focus();
 }
 
+// Add event listener to generate button
+generateBtn.addEventListener("click", generatePassword);
+
 function copyToClipboard() {
   // BONUS
 }
