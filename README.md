@@ -8,6 +8,10 @@ This is a program that will allow you to have the computer generate a secure pas
 
 https://shawn220a.github.io/password_generator/
 
+## Screenshot
+
+[![Image from Gyazo](https://i.gyazo.com/71a85d7282e3634dc06e69ca412758a5.png)](https://gyazo.com/71a85d7282e3634dc06e69ca412758a5)
+
 ## Programming Languages Used
 
 * HTML
