@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var passwordTextFinal = document.querySelector("#password");
+var copyText = document.querySelector("#password");
 
 const lowerCaseChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 const upperCaseChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -11,6 +12,7 @@ let password = [];
 let passwordChars = [];
 let passwordText = "";
 
+// Get user input on what characters to use for password
 function userInput() {
   let lower = confirm("Would you like lower case characters?");
   let upper = confirm("Would you like upper case characters?");
@@ -40,6 +42,7 @@ function userInput() {
   return password;
 }
 
+// Create the password
 function randomizePassword(passLength, password) {
   for (i = 0; i < passLength; i++) {
     let passwordChoice = Math.floor(Math.random() * password.length);
@@ -74,14 +77,22 @@ function writePassword(passwordText) {
   var password = passwordText;
 
   passwordTextFinal.value = password;
+}
 
-  // copyBtn.removeAttribute("disabled");
-  // copyBtn.focus();
+// Copy Text to clipboard
+function copyToClipboard() {
+  copyText.select();
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
 
-function copyToClipboard() {
-  // BONUS
-}
+// Add event listener to copy button
+document.querySelector("#copy").addEventListener("click", copyToClipboard);
+
+
