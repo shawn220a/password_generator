@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a program that will allow you to have the computer generate a secure password. The constraints are that the password must be at least 8 characters and less than 128 characters long.
+This is a program that will allow you to have the computer generate a secure password. The constraints are that the password must be at least 8 characters and less than 128 characters long. You are able to generate a password, copy that password to the clipboard, and clear the password to establish a new password.
 
 ## Link to Live
 
