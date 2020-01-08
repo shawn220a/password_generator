@@ -10,7 +10,7 @@ https://shawn220a.github.io/password_generator/
 
 ## Screenshot
 
-[![Image from Gyazo](https://i.gyazo.com/71a85d7282e3634dc06e69ca412758a5.png)](https://gyazo.com/71a85d7282e3634dc06e69ca412758a5)
+[![Image from Gyazo](https://i.gyazo.com/ae6f2cb7b7d90f44d5bcc3ddfb2e03ca.png)](https://gyazo.com/ae6f2cb7b7d90f44d5bcc3ddfb2e03ca)
 
 ## Programming Languages Used
 
